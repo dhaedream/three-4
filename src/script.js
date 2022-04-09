@@ -6,7 +6,18 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
+/**
+ * Axes Helper
+ */
 
+var dir = new THREE.Vector3(0, 1, 0);
+dir.normalize();
+var origin = new THREE.Vector3(0, 0, 0);
+var length = 1;
+var hex = 0x00ff00;
+
+var arrowHelper = new THREE.ArrowHelper(dir, origin, length, hex);
+scene.add(arrowHelper);
 /**
  * Object
  */
@@ -19,15 +30,15 @@ scene.add(mesh);
  * Sizes
  */
 const sizes = {
-  width: 820,
-  height: 900,
+  width: 850,
+  height: 920,
 };
 
 /**
  * Camera
  */
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-camera.position.z = 3;
+camera.position.z = 6;
 scene.add(camera);
 
 /**
