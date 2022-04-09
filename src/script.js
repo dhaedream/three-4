@@ -32,7 +32,7 @@ mesh.scale.z = 0.5;
 scene.add(mesh);
 
 /**
- * Sizes
+ * Camera Sizes
  */
 const sizes = {
   width: 850,
@@ -42,13 +42,14 @@ const sizes = {
 /**
  * Rotation
  */
-mesh.rotation.x = Math.PI * 0.25;
+mesh.rotation.x = Math.PI * 0.15;
 mesh.rotation.y = Math.PI * 0.25;
 /**
  * Camera
  */
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 6;
+camera.lookAt(new THREE.Vector3(0, -1, 0));
 scene.add(camera);
 
 /**
