@@ -18,9 +18,27 @@ var hex = 0x00ff00;
 
 var arrowHelper = new THREE.ArrowHelper(dir, origin, length, hex);
 scene.add(arrowHelper);
+
 /**
  * Object
  */
+
+/**
+ * Animate
+ */
+// const tick = () => {
+//   // Update objects
+//   mesh.rotation.y += 0.01;
+
+//   // Render
+//   renderer.render(scene, camera);
+
+//   // Call tick again on the next frame
+//   window.requestAnimationFrame(tick);
+// };
+
+// tick();
+
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 
@@ -34,6 +52,7 @@ scene.add(mesh);
 /**
  * Objects
  */
+
 const group = new THREE.Group();
 group.scale.y = 2;
 group.rotation.y = 0.2;
